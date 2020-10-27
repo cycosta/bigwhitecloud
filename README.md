@@ -1,6 +1,6 @@
-# React App Boilerplate
+# Big White Cloud
 
-A simple boilerplate for personal React app projects.
+A weather React app.
 
 ## Language
 
@@ -9,8 +9,3 @@ A simple boilerplate for personal React app projects.
 ## Framework
 
 - [React.js 16.13.1](https://reactjs.org/)
-
-## Tools
-
-- [Create React App](https://github.com/facebook/create-react-app)
-- [Reach Router](https://reach.tech/router/)
