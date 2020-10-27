@@ -1,0 +1,42 @@
+.card {
+  width: 100%;
+  margin: 0 10px;
+
+  @include breakpoint(tablet) {
+    width: 320px;
+  }
+
+  &__figure {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 5px 5px 40px 0 rgba(0, 0, 0, .4);
+
+    &:hover {
+      .card__image {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .3s;
+  }
+
+  &__name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+    font-family: 'Abril Fatface', cursive;
+    font-size: 6rem;
+    text-align: center;
+    text-shadow: 0px 1px 5px black;
+  }
+}
