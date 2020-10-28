@@ -1,37 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 
-function Dropdown() {
+function Dropdown({ cities }) {
+  const [dropdownOpen, setDropdownOpen] = useState(false)
+
+  const [selectedCity, setSelectedCity] = useState('Choose your city')
+
   return (
     <div className="dropdown">
-      <input type="checkbox" className="dropdown__switch" id="filter-switch" hidden />
-      <label htmlFor="filter-switch" className="dropdown__options-filter">
-        <ul className="dropdown__filter" role="listbox" tabIndex="-1">
+      <label onClick={() => setDropdownOpen(!dropdownOpen)} className="dropdown__options-filter">
+        <ul className={`dropdown__filter ${dropdownOpen ? 'dropdown__filter--open' : ''}`} role="listbox" tabIndex="-1">
           <li className="dropdown__filter-selected" aria-selected="true">
-            Choose your city
+            {selectedCity}
           </li>
           <li>
-            <ul className="dropdown__select">
-              <li className="dropdown__select-option" role="option">
-                Option 1
-              </li>
-              <li className="dropdown__select-option" role="option">
-                Option 2
-              </li>
-              <li className="dropdown__select-option" role="option">
-                Option 3
-              </li>
-              <li className="dropdown__select-option" role="option">
-                Option 4
-              </li>
-              <li className="dropdown__select-option" role="option">
-                Option 5
-              </li>
+            <ul className={`dropdown__select ${dropdownOpen ? 'dropdown__select--open' : ''}`}>
+              {cities.map(({ id, name }) => (
+                <li key={id} onClick={() => setSelectedCity(name)} className="dropdown__select-option" role="option">
+                  {name}
+                </li>
+              ))}
             </ul>
           </li>
         </ul>
       </label>
     </div>
   )
+}
+
+Dropdown.propTypes = {
+  cities: PropTypes.array
 }
 
 export default Dropdown
