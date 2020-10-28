@@ -7,14 +7,6 @@
 		width: 320px;
 	}
 
-	&__switch:checked + &__options-filter &__select {
-		transform: scaleY(1);
-	}
-
-	&__switch:checked + &__options-filter &__filter:after {
-		transform: rotate(-135deg);
-	}
-
 	&__options-filter {
     width: 100%;
     cursor: pointer;
@@ -45,10 +37,16 @@
       content: '';
       width: 10px;
       height: 10px;
-      border-right: 2px solid $silver;
-      border-bottom: 2px solid $silver;
+      border-right: 1px solid $silver;
+      border-bottom: 1px solid $silver;
       transform: rotate(45deg) translateX(-45%);
       transition: .2s ease-in-out;
+    }
+
+    &--open {
+      &::after {
+        transform: rotate(-135deg);
+      }
     }
   }
 
@@ -58,13 +56,18 @@
     left: 0;
     z-index: 2;
     width: 100%;
+    max-height: 330px;
     margin-top: 5px;
-    overflow: hidden;
+    overflow: auto;
     box-shadow: 0 5px 10px 0 rgba(152, 152, 152, 0.6);
 		transform: scaleY(0);
 		transform-origin: top;
     font-weight: 300;
     transition: .2s ease-in-out;
+
+    &--open {
+      transform: scaleY(1);
+    }
   }
 
 	&__select-option {

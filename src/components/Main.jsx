@@ -1,5 +1,8 @@
 import React from 'react'
 
+// Data
+import { cities } from '../services/data'
+
 // Components
 import Logo from './Logo'
 import Dropdown from './Dropdown'
@@ -9,7 +12,7 @@ function Main() {
   return (
     <main className="main">
       <Logo />
-      <Dropdown />
+      <Dropdown cities={cities} />
       <Card />
     </main>
   )
