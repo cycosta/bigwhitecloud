@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 // Data
 import { cities } from '../services/data'
@@ -9,11 +9,13 @@ import Dropdown from './Dropdown'
 import Card from './Card'
 
 function Main() {
+  const [selectedCity, setSelectedCity] = useState({})
+
   return (
     <main className="main">
       <Logo />
-      <Dropdown cities={cities} />
-      <Card />
+      <Dropdown cities={cities} selectedCity={selectedCity} setSelectedCity={setSelectedCity} />
+      <Card selectedCity={selectedCity} />
     </main>
   )
 }

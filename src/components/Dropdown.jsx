@@ -1,23 +1,21 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
-function Dropdown({ cities }) {
+function Dropdown({ cities, selectedCity, setSelectedCity }) {
   const [dropdownOpen, setDropdownOpen] = useState(false)
-
-  const [selectedCity, setSelectedCity] = useState('Choose your city')
 
   return (
     <div className="dropdown">
       <label onClick={() => setDropdownOpen(!dropdownOpen)} className="dropdown__options-filter">
         <ul className={`dropdown__filter ${dropdownOpen ? 'dropdown__filter--open' : ''}`} role="listbox" tabIndex="-1">
           <li className="dropdown__filter-selected" aria-selected="true">
-            {selectedCity}
+            {selectedCity.name || 'Choose your city'}
           </li>
           <li>
             <ul className={`dropdown__select ${dropdownOpen ? 'dropdown__select--open' : ''}`}>
-              {cities.map(({ id, name }) => (
-                <li key={id} onClick={() => setSelectedCity(name)} className="dropdown__select-option" role="option">
-                  {name}
+              {cities.map((city) => (
+                <li key={city.id} onClick={() => setSelectedCity(city)} className="dropdown__select-option" role="option">
+                  {city.name}
                 </li>
               ))}
             </ul>
@@ -29,7 +27,9 @@ function Dropdown({ cities }) {
 }
 
 Dropdown.propTypes = {
-  cities: PropTypes.array
+  cities: PropTypes.array,
+  selectedCity: PropTypes.object,
+  setSelectedCity: PropTypes.func
 }
 
 export default Dropdown

@@ -44,201 +44,241 @@ export const cities = [
   {
     id: 2759794,
     name: 'Amsterdam',
-    image: amsterdam
+    image: amsterdam,
+    alt: 'Photography by Robin Benzrihem'
   },
   {
     id: 264371,
     name: 'Athens',
-    image: athens
+    image: athens,
+    alt: 'Photography by Julia Joppien'
   },
   {
     id: 3128760,
     name: 'Barcelona',
-    image: barcelona
+    image: barcelona,
+    alt: 'Photography by Louisa Schaad'
   },
   {
     id: 1816670,
     name: 'Beijing',
-    image: beijing
+    image: beijing,
+    alt: 'Photography by Ajmal Mk'
   },
   {
     id: 2950159,
     name: 'Berlin',
-    image: berlin
+    image: berlin,
+    alt: 'Photography by Jay Wennington'
   },
   {
     id: 3688689,
     name: 'Bogotá',
-    image: bogota
+    image: bogota,
+    alt: 'Photography by Random Institute'
   },
   {
     id: 2800866,
     name: 'Brussels',
-    image: brussels
+    image: brussels,
+    alt: 'Photography by Alex Vasey'
   },
   {
     id: 3054643,
     name: 'Budapest',
-    image: budapest
+    image: budapest,
+    alt: 'Photography by Florian Van Duyn'
   },
   {
     id: 3435910,
     name: 'Buenos Aires',
-    image: buenosaires
+    image: buenosaires,
+    alt: 'Photography by Nathana Rebouças'
   },
   {
     id: 3530597,
     name: 'Ciudad de Mexico',
-    image: ciudaddemexico
+    image: ciudaddemexico,
+    alt: 'Photography by Jesus Mora'
   },
   {
     id: 2618425,
     name: 'Copenhagen',
-    image: copenhagen
+    image: copenhagen,
+    alt: 'Photography by Peter Ivey Hansen'
   },
   {
     id: 5344157,
     name: 'Dublin',
-    image: dublin
+    image: dublin,
+    alt: 'Photography by Anna Church'
   },
   {
     id: 3553478,
     name: 'Havana',
-    image: havana
+    image: havana,
+    alt: 'Photography by Spencer Everett'
   },
   {
     id: 1819729,
     name: 'Hong Kong',
-    image: hongkong
+    image: hongkong,
+    alt: 'Photography by Annie Spratt'
   },
   {
     id: 745042,
     name: 'Istanbul',
-    image: istanbul
+    image: istanbul,
+    alt: 'Photography by Fatih'
   },
   {
     id: 1642911,
     name: 'Jakarta',
-    image: jakarta
+    image: jakarta,
+    alt: 'Photography by Refhad'
   },
   {
     id: 281184,
     name: 'Jerusalem',
-    image: jerusalem
+    image: jerusalem,
+    alt: 'Photography by Cristina Gottardi'
   },
   {
     id: 703448,
     name: 'Kiev',
-    image: kiev
+    image: kiev,
+    alt: 'Photography by Hristo Sahatchiev'
   },
   {
     id: 3936456,
     name: 'Lima',
-    image: lima
+    image: lima,
+    alt: 'Photography by Adrian Dascal'
   },
   {
     id: 2267057,
     name: 'Lisbon',
-    image: lisbon
+    image: lisbon,
+    alt: 'Photography by Julian Dik'
   },
   {
     id: 2643743,
     name: 'London',
-    image: london
+    image: london,
+    alt: 'Photography by Mariana Alves'
   },
   {
     id: 5368361,
     name: 'Los Angeles',
-    image: losangeles
+    image: losangeles,
+    alt: 'Photography by Lauren Fleischmann'
   },
   {
     id: 3117735,
     name: 'Madrid',
-    image: madrid
+    image: madrid,
+    alt: 'Photography by Alex Vasey'
   },
   {
     id: 4163971,
     name: 'Melbourne',
-    image: melbourne
+    image: melbourne,
+    alt: 'Photography by Will Li'
   },
   {
     id: 2993457,
     name: 'Monaco',
-    image: monaco
+    image: monaco,
+    alt: 'Photography by Jean Baptiste Henry'
   },
   {
     id: 524901,
     name: 'Moscow',
-    image: moscow
+    image: moscow,
+    alt: 'Photography by Nikolay Vorobyev'
   },
   {
     id: 1275339,
     name: 'Mumbai',
-    image: mumbai
+    image: mumbai,
+    alt: 'Photography by Harsh Jain'
   },
   {
     id: 5128581,
     name: 'New York City',
-    image: newyorkcity
+    image: newyorkcity,
+    alt: 'Photography by Clay Banks'
   },
   {
     id: 2988507,
     name: 'Paris',
-    image: paris
+    image: paris,
+    alt: 'Photography by Julio Rivera'
   },
   {
     id: 3067696,
     name: 'Prague',
-    image: prague
+    image: prague,
+    alt: 'Photography by Marius Serban'
   },
   {
     id: 3451190,
     name: 'Rio de Janeiro',
-    image: riodejaneiro
+    image: riodejaneiro,
+    alt: 'Photography by Mariano Diaz'
   },
   {
     id: 4219762,
     name: 'Rome',
-    image: rome
+    image: rome,
+    alt: 'Photography by Fineas Anton'
   },
   {
     id: 3871336,
     name: 'Santiago',
-    image: santiago
-  },
-  {
-    id: 1835848,
-    name: 'Seoul',
-    image: seoul
-  },
-  {
-    id: 1796236,
-    name: 'Shanghai',
-    image: shanghai
-  },
-  {
-    id: 2673730,
-    name: 'Stockholm',
-    image: stockholm
+    image: santiago,
+    alt: 'Photography by Nathana Rebouças'
   },
   {
     id: 3448439,
     name: 'São Paulo',
-    image: saopaulo
+    image: saopaulo,
+    alt: 'Photography by Bianca Monteiro'
+  },
+  {
+    id: 1835848,
+    name: 'Seoul',
+    image: seoul,
+    alt: 'Photography by Markus Winkler'
+  },
+  {
+    id: 1796236,
+    name: 'Shanghai',
+    image: shanghai,
+    alt: 'Photography by Hanny Naibaho'
+  },
+  {
+    id: 2673730,
+    name: 'Stockholm',
+    image: stockholm,
+    alt: 'Photography by Nikola Johnny Mirkovic'
   },
   {
     id: 1850144,
     name: 'Tokyo',
-    image: tokyo
+    image: tokyo,
+    alt: 'Photography by Bantersnaps'
   },
   {
     id: 6167865,
     name: 'Toronto',
-    image: toronto
+    image: toronto,
+    alt: 'Photography by Juan Rojas'
   },
   {
     id: 2761369,
     name: 'Vienna',
-    image: vienna
+    image: vienna,
+    alt: 'Photography by Anna Hunko'
   },
 ]
