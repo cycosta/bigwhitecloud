@@ -16,7 +16,7 @@ function Dropdown({ cities }) {
           <li>
             <ul className={`dropdown__select ${dropdownOpen ? 'dropdown__select--open' : ''}`}>
               {cities.map(({ id, name }) => (
-                <li key={id} className="dropdown__select-option" role="option">
+                <li key={id} onClick={() => setSelectedCity(name)} className="dropdown__select-option" role="option">
                   {name}
                 </li>
               ))}
