@@ -1,6 +1,6 @@
 .weather {
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   left: 10px;
   display: flex;
   flex-direction: column;
@@ -11,22 +11,61 @@
   font-family: $textFont;
 
   &__icon {
-    max-width: 40px;
-  }
-
-  &__main {
-    margin: 10px 0 5px;
-    font-size: 2.6rem;
-  }
-
-  &__date {
-    font-size: 1.2rem;
-    font-weight: 200;
+    width: 40px;
+    height: 40px;
   }
 
   &__temp {
-    margin-top: 10px;
-    font-size: 4rem;
+    display: flex;
+    margin: 10px 0 5px 5px;
+    font-size: 3.8rem;
+    font-weight: 700;
+  }
+
+  &__symbol {
+    font-size: 2.2rem;
+    font-weight: 400;
+  }
+
+  &__main {
+    font-size: 2rem;
+    text-transform: capitalize;
+  }
+
+  &__levels {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  &__min,
+  &__max {
+    width: 100%;
+    padding: 15px 5px;
+    background-color: rgba(255, 255, 255, .2);
+    text-align: center;
+  }
+
+  &__min {
+    margin-right: 2px;
+    border-bottom-left-radius: 15px;
+  }
+
+  &__max {
+    margin-left: 2px;
+    border-bottom-right-radius: 15px;
+  }
+
+  &__label {
+    font-size: 1.4rem;
+    font-weight: 200;
+  }
+
+  &__value {
+    margin-top: 5px;
+    font-size: 1.6rem;
     font-weight: 700;
   }
 }
