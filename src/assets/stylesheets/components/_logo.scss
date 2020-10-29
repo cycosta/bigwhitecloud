@@ -2,4 +2,8 @@
   color: $caribbean-blue;
   font-family: $logoFont;
   font-size: 4.5rem;
+
+  @include breakpoint(smallPhone) {
+    font-size: 3.8rem;
+  }
 }
