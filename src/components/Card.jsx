@@ -16,7 +16,7 @@ function Card({ selectedCity }) {
           <h2>{selectedCity.name}</h2>
         </figcaption>
 			</figure>
-      <Weather id={selectedCity.id} />
+      {selectedCity.id && <Weather id={selectedCity.id} />}
 		</div>
   )
 }

@@ -8,13 +8,13 @@ import { getWeather } from '../services/api'
 import Loader from './Loader'
 
 function Weather({ id }) {
-  const [weather, setWeather] = useState({})
+  const [weather, setWeather] = useState(false)
 
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    setLoading(true)
     if (!id) return
+    setLoading(true)
     getWeather(id).then((data) => {
       setWeather(data)
       setLoading(false)
@@ -26,7 +26,7 @@ function Weather({ id }) {
       <Loader />
     ) : (
       <div className="weather">
-        <img src={`${process.env.PUBLIC_URL}/assets/${weather.icon}.svg`} alt={weather.main} className="weather__icon"/>
+        <img src={`${process.env.PUBLIC_URL}/assets/${weather.icon}.svg`} alt={weather.main} className="weather__icon" />
         <p className="weather__temp">{Math.round(weather.temp)}<span className="weather__symbol">&deg;</span></p>
         <h3 className="weather__main">{weather.description}</h3>
         <div className="weather__levels">
