@@ -1,0 +1,74 @@
+.dropdown {
+  width: 320px;
+  margin: 40px 0 20px;
+
+  &__options-filter {
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &__filter {
+    position: relative;
+    display: flex;
+    padding: 20px;
+    color: $silver;
+    background-color: white;
+    border-radius: 18px;
+    font-size: 14px;
+    transition: 0.3s;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::after {
+      position: absolute;
+      top: 45%;
+      right: 20px;
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-right: 1px solid $silver;
+      border-bottom: 1px solid $silver;
+      transform: rotate(45deg) translateX(-45%);
+      transition: 0.3s ease-in-out;
+    }
+
+    &--open {
+      &::after {
+        transform: rotate(-135deg);
+      }
+    }
+  }
+
+  &__select {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 3;
+    border-radius: 18px;
+    width: 100%;
+    max-height: 330px;
+    margin-top: 10px;
+    overflow: scroll;
+    scrollbar-width: none;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.2s ease-in-out;
+
+    &--open {
+      transform: scaleY(1);
+    }
+  }
+
+  &__select-option {
+    padding: 20px;
+    background-color: white;
+    border-bottom: 1px solid $bright;
+    transition: 0.3s;
+
+    &:last-of-type {
+      border-bottom: 0;
+    }
+  }
+}

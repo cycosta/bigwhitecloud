@@ -1,0 +1,43 @@
+@keyframes clear {
+  to {
+    width: 150px;
+  }
+}
+
+.loader {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 80px;
+    animation: clear 1s linear infinite alternate;
+  }
+
+  &__cloud {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+
+    &--left {
+      top: 0;
+      right: initial;
+      bottom: initial;
+      left: 0;
+      transform: scaleX(-1);
+    }
+  }
+
+  &__sun {
+    width: 50px;
+    height: 50px;
+  }
+}
