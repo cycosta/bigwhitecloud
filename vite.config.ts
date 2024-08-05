@@ -8,9 +8,9 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData: `
-          @import "./src/tokens/_breakpoints.scss";
-          @import "./src/tokens/_colors.scss";
-          @import "./src/tokens/_spacing.scss";
+          @import "/src/tokens/_breakpoints.scss";
+          @import "/src/tokens/_colors.scss";
+          @import "/src/tokens/_spacing.scss";
         `,
       },
     },

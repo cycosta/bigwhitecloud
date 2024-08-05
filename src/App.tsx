@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./index.scss";
 
 import { Wrapper, Logo, Dropdown, Card } from "./components";
 import { cities } from "./data/cities";
