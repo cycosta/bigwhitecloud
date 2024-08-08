@@ -7,19 +7,19 @@ interface DropdownProps {
     id: number;
     name: string;
     image: string;
-    alt: string;
+    author: string;
   }[];
   selectedCity?: {
     id: number;
     name: string;
     image: string;
-    alt: string;
+    author: string;
   };
   setSelectedCity: (city: {
     id: number;
     name: string;
     image: string;
-    alt: string;
+    author: string;
   }) => void;
 }
 

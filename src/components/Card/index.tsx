@@ -9,7 +9,7 @@ interface CardProps {
     id: number;
     name: string;
     image: string;
-    alt: string;
+    author: string;
   };
 }
 
@@ -20,7 +20,7 @@ export const Card = ({ selectedCity }: CardProps) => {
         <img
           className="card__image"
           src={selectedCity?.image || placeholder}
-          alt={selectedCity?.alt || "Photography by Sorasak"}
+          alt={`Photography by ${selectedCity?.author || `Sorasak`}`}
         />
       </figure>
       {selectedCity?.id && <Weather cityId={selectedCity.id} />}
