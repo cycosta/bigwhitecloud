@@ -11,10 +11,11 @@ export const Copyright = ({ author }: CopyrightProps) => {
 
   useEffect(() => {
     setAnimation(false);
+    setNumberOfChars(0);
 
     setTimeout(() => {
       if (author) {
-        setNumberOfChars(author.replace(/\s+/g, "").length);
+        setNumberOfChars(author.length);
         setAnimation(true);
       }
     }, 1000);
@@ -28,7 +29,7 @@ export const Copyright = ({ author }: CopyrightProps) => {
           "copyright__author " + (animation && "copyright__author--animated")
         }
         style={{
-          width: `${animation ? numberOfChars + `ch` : `0px`}`,
+          width: `${animation ? numberOfChars : `0`}ch`,
           animationTimingFunction: `steps(${numberOfChars}, end)`,
         }}
       >
