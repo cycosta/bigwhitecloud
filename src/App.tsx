@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./index.scss";
 
-import { Wrapper, Logo, Dropdown, Card } from "./components";
+import { Wrapper, Dropdown, Card, Copyright } from "./components";
 import { cities } from "./data/cities";
 
 export const App = () => {
@@ -9,18 +9,18 @@ export const App = () => {
     id: number;
     name: string;
     image: string;
-    alt: string;
+    author: string;
   }>();
 
   return (
     <Wrapper>
-      <Logo />
       <Dropdown
         cities={cities}
         selectedCity={selectedCity}
         setSelectedCity={setSelectedCity}
       />
       <Card selectedCity={selectedCity} />
+      <Copyright author={selectedCity?.author || "Sorasak"} />
     </Wrapper>
   );
 };

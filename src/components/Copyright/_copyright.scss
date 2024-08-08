@@ -1,0 +1,54 @@
+@keyframes reveal {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    background-color: $dustyGray;
+  }
+
+  50% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: $dustyGray;
+  }
+}
+
+.copyright {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: $dustyGray;
+  text-align: center;
+  white-space: nowrap;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: -2px;
+    content: "";
+    width: 2px;
+    height: 100%;
+    background-color: $dustyGray;
+    animation: blink 0.6s infinite;
+  }
+
+  &__tag {
+    margin-right: 3px;
+  }
+
+  &__author {
+    overflow: hidden;
+
+    &--animated {
+      animation-name: reveal;
+      animation-duration: 1s;
+    }
+  }
+}
