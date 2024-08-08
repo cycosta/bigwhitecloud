@@ -11,7 +11,7 @@
     position: relative;
     display: flex;
     padding: 20px;
-    color: $silver;
+    color: $gray;
     background-color: white;
     border-radius: 18px;
     font-size: 14px;
@@ -28,8 +28,8 @@
       content: "";
       width: 10px;
       height: 10px;
-      border-right: 1px solid $silver;
-      border-bottom: 1px solid $silver;
+      border-right: 1px solid $gray;
+      border-bottom: 1px solid $gray;
       transform: rotate(45deg) translateX(-45%);
       transition: 0.3s ease-in-out;
     }
@@ -64,7 +64,7 @@
   &__select-option {
     padding: 20px;
     background-color: white;
-    border-bottom: 1px solid $bright;
+    border-bottom: 1px solid $offWhite;
     transition: 0.3s;
 
     &:last-of-type {

@@ -6,7 +6,7 @@
 
 @keyframes blink {
   0% {
-    background-color: $dustyGray;
+    background-color: $gray;
   }
 
   50% {
@@ -14,7 +14,7 @@
   }
 
   100% {
-    background-color: $dustyGray;
+    background-color: $gray;
   }
 }
 
@@ -22,9 +22,15 @@
   position: relative;
   display: flex;
   align-items: center;
+  gap: 6px;
   margin-top: 20px;
-  font-size: 14px;
-  color: $dustyGray;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: $gray;
   text-align: center;
   white-space: nowrap;
 
@@ -35,12 +41,8 @@
     content: "";
     width: 2px;
     height: 100%;
-    background-color: $dustyGray;
+    background-color: $gray;
     animation: blink 0.6s infinite;
-  }
-
-  &__tag {
-    margin-right: 3px;
   }
 
   &__author {
